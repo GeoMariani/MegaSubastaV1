@@ -1,0 +1,2 @@
+# MegaSubastaV1
+SubastaEnSolidityVersion1
