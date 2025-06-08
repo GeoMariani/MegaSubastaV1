@@ -7,18 +7,18 @@ Este contrato Solidity permite realizar una subasta segura y automatizada en la 
 ## 🚀 Funcionalidades Principales
 
 - **Subasta con tiempo configurable.**
-- **Extensión automática**: Si una oferta válida llega en los últimos `N` segundos, el plazo se extiende.
+- **Extensión automática**: Configurado en concepto de segundosFinalesAdicionales, luego si una oferta válida llega en los últimos `N` segundos, el plazo se extiende por 'N' segundos.
 - **Múltiples ofertas** por un mismo usuario.
-- **Retiro de fondos** para todos los oferentes no ganadores (menos una comisión).
-- **Pago automático al vendedor** al finalizar.
+- **Retiro de fondos** para todos los oferentes y en función de sus ofertas no ganadoras (reteniendo una comisión de 2%).
+- **Pago al vendedor** al finalizar la subasta el vendedor podrá solitar el pago por su articulo vendido.
 - **Reclamo de saldo restante** por parte del organizador de la subasta.
 
 ---
 
 ## 🧱 Roles en la Subasta
 
-- `vendedor`: Quien ofrece el objeto en subasta. Recibe el pago del mayor postor.
-- `ownerSubasta`: Quien despliega el contrato y administra la subasta.
+- `vendedor`: Quien ofrece el objeto en subasta. Recibe el pago del mayor postor. 
+- `ownerSubasta`: Quien despliega el contrato y administra la subasta. 
 - `oferenteGanador`: Dirección del mejor postor.
 
 ---
@@ -50,7 +50,7 @@ Este contrato Solidity permite realizar una subasta segura y automatizada en la 
 - `TiempoExtendido`: Si el plazo se extiende por una oferta en el último tramo.
 - `SubastaTerminada`: Al cerrar oficialmente la subasta.
 - `RetiroRealizado`: Cuando un oferente retira sus fondos no ganadores.
-- `PagoAlVendedor`: Cuando el vendedor recibe el pago del mayor postor.
+- `PagoAlVendedor`: Cuando el vendedor recibe el pago realizado por el mayor postor.
 - `FondosReclamadosPorOwner`: Cuando el organizador recupera el saldo restante.
 
 ---
